@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import bannerImg from "../assets/hero.png";
 import Container from "./Container";
 import { FaGooglePlay, FaApple } from "react-icons/fa";
@@ -45,7 +46,7 @@ const Banner = () => {
       </Container>
 
       {/* Trusted Stats */}
-      <div className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] py-8 md:py-12">
+      <div className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] py-8 md:py-12 mx-1 rounded-xl">
         <Container>
           <h3 className="text-center text-2xl md:text-3xl font-bold text-white mb-8">
             Trusted by Millions, Built for You

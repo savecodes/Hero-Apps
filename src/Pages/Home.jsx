@@ -1,14 +1,13 @@
-import React from 'react';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
-import Banner from '../Components/Banner';
+import Banner from "../Components/Banner";
+import TrendingApps from "../Components/TrendingApps";
 
 const Home = () => {
-    return (
-        <div>
-            <Banner/>
-        </div>
-    );
+  return (
+    <div>
+        <Banner />
+        <TrendingApps />
+    </div>
+  );
 };
 
 export default Home;

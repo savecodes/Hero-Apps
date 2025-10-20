@@ -1,18 +1,22 @@
-import React from "react";
-import Home from "../Pages/Home";
-import Navbar from "../Components/Navbar";
 import { Outlet } from "react-router";
+import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import ScrollToTop from "../Components/ScrollToTop";
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col">
-      <Navbar></Navbar>
-      <div className="flex-1 min-h-screen">
-        <Outlet></Outlet>
+    <>
+      <ScrollToTop />
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+
+        <div className="flex-1">
+          <Outlet />
+        </div>
+
+        <Footer />
       </div>
-      <Footer></Footer>
-    </div>
+    </>
   );
 };
 

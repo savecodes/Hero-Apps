@@ -1,0 +1,362 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Spotify_Logo_CMYK_Green.png",
+    "title": "Spotify",
+    "companyName": "Spotify AB",
+    "id": 1,
+    "description": "Stream millions of songs, podcasts, and playlists on Spotify. Discover new music and share with friends.",
+    "size": 125,
+    "reviews": 25600000,
+    "ratingAvg": 4.7,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 500000 },
+      { "name": "2 star", "count": 300000 },
+      { "name": "3 star", "count": 1200000 },
+      { "name": "4 star", "count": 4800000 },
+      { "name": "5 star", "count": 19000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Netflix_2015_logo.svg",
+    "title": "Netflix",
+    "companyName": "Netflix, Inc.",
+    "id": 2,
+    "description": "Watch TV shows and movies anytime, anywhere. Enjoy exclusive Netflix originals and top global hits.",
+    "size": 160,
+    "reviews": 20500000,
+    "ratingAvg": 4.4,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 700000 },
+      { "name": "2 star", "count": 600000 },
+      { "name": "3 star", "count": 1500000 },
+      { "name": "4 star", "count": 4000000 },
+      { "name": "5 star", "count": 13700000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+    "title": "Facebook",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 3,
+    "description": "Connect with friends, share memories, photos, and stay updated with the latest news on Facebook.",
+    "size": 190,
+    "reviews": 102000000,
+    "ratingAvg": 4.1,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 3200000 },
+      { "name": "2 star", "count": 4500000 },
+      { "name": "3 star", "count": 8300000 },
+      { "name": "4 star", "count": 25500000 },
+      { "name": "5 star", "count": 61000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/YouTube_social_white_square_%282017%29.svg",
+    "title": "YouTube",
+    "companyName": "Google LLC",
+    "id": 4,
+    "description": "Watch, upload, and share videos worldwide. Subscribe to your favorite creators and enjoy endless content.",
+    "size": 145,
+    "reviews": 108000000,
+    "ratingAvg": 4.5,
+    "downloads": 10000000000,
+    "ratings": [
+      { "name": "1 star", "count": 1500000 },
+      { "name": "2 star", "count": 1800000 },
+      { "name": "3 star", "count": 7000000 },
+      { "name": "4 star", "count": 29000000 },
+      { "name": "5 star", "count": 69000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/TikTok_logo.svg",
+    "title": "TikTok",
+    "companyName": "ByteDance Ltd.",
+    "id": 5,
+    "description": "Create and share short videos with global trends, music, and creative effects on TikTok.",
+    "size": 180,
+    "reviews": 32500000,
+    "ratingAvg": 4.6,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 900000 },
+      { "name": "2 star", "count": 800000 },
+      { "name": "3 star", "count": 1600000 },
+      { "name": "4 star", "count": 5000000 },
+      { "name": "5 star", "count": 24200000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Instagram_Logo.png",
+    "title": "Instagram",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 6,
+    "description": "Share photos, reels, and stories with your friends and followers on Instagram.",
+    "size": 135,
+    "reviews": 56000000,
+    "ratingAvg": 4.4,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 2000000 },
+      { "name": "2 star", "count": 1400000 },
+      { "name": "3 star", "count": 4200000 },
+      { "name": "4 star", "count": 13500000 },
+      { "name": "5 star", "count": 34900000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Google_Play_Store_badge_EN.svg",
+    "title": "Google Play Store",
+    "companyName": "Google LLC",
+    "id": 7,
+    "description": "Discover, download, and update Android apps and games directly from the Play Store.",
+    "size": 80,
+    "reviews": 20000000,
+    "ratingAvg": 4.3,
+    "downloads": 10000000000,
+    "ratings": [
+      { "name": "1 star", "count": 500000 },
+      { "name": "2 star", "count": 800000 },
+      { "name": "3 star", "count": 2200000 },
+      { "name": "4 star", "count": 4600000 },
+      { "name": "5 star", "count": 11900000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Gmail_icon_%282020%29.svg",
+    "title": "Gmail",
+    "companyName": "Google LLC",
+    "id": 8,
+    "description": "Manage emails efficiently with Gmail’s smart inbox, security, and powerful search features.",
+    "size": 95,
+    "reviews": 23000000,
+    "ratingAvg": 4.6,
+    "downloads": 10000000000,
+    "ratings": [
+      { "name": "1 star", "count": 400000 },
+      { "name": "2 star", "count": 700000 },
+      { "name": "3 star", "count": 1500000 },
+      { "name": "4 star", "count": 4700000 },
+      { "name": "5 star", "count": 16200000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_Office_2021_logo.svg",
+    "title": "Microsoft Office",
+    "companyName": "Microsoft Corporation",
+    "id": 9,
+    "description": "Access Word, Excel, and PowerPoint in one convenient productivity suite for Android.",
+    "size": 310,
+    "reviews": 9600000,
+    "ratingAvg": 4.5,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 400000 },
+      { "name": "2 star", "count": 300000 },
+      { "name": "3 star", "count": 900000 },
+      { "name": "4 star", "count": 1800000 },
+      { "name": "5 star", "count": 6200000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Google_Maps_icon_%282020%29.svg",
+    "title": "Google Maps",
+    "companyName": "Google LLC",
+    "id": 10,
+    "description": "Navigate the world faster with real-time traffic, public transit info, and street-level imagery.",
+    "size": 130,
+    "reviews": 20000000,
+    "ratingAvg": 4.5,
+    "downloads": 10000000000,
+    "ratings": [
+      { "name": "1 star", "count": 600000 },
+      { "name": "2 star", "count": 400000 },
+      { "name": "3 star", "count": 1000000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 15000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    "title": "Apple Music",
+    "companyName": "Apple Inc.",
+    "id": 11,
+    "description": "Stream 100 million songs ad-free, download tracks, and listen across all your Apple devices.",
+    "size": 210,
+    "reviews": 5400000,
+    "ratingAvg": 4.7,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 200000 },
+      { "name": "2 star", "count": 150000 },
+      { "name": "3 star", "count": 400000 },
+      { "name": "4 star", "count": 1100000 },
+      { "name": "5 star", "count": 3450000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    "title": "Apple TV+",
+    "companyName": "Apple Inc.",
+    "id": 12,
+    "description": "Enjoy award-winning Apple Originals and exclusive series with a premium viewing experience.",
+    "size": 260,
+    "reviews": 3200000,
+    "ratingAvg": 4.6,
+    "downloads": 300000000,
+    "ratings": [
+      { "name": "1 star", "count": 100000 },
+      { "name": "2 star", "count": 150000 },
+      { "name": "3 star", "count": 400000 },
+      { "name": "4 star", "count": 900000 },
+      { "name": "5 star", "count": 1750000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Apple_Podcasts_Icon.svg",
+    "title": "Apple Podcasts",
+    "companyName": "Apple Inc.",
+    "id": 13,
+    "description": "Discover and listen to your favorite podcasts across all genres with Apple Podcasts.",
+    "size": 130,
+    "reviews": 1600000,
+    "ratingAvg": 4.3,
+    "downloads": 150000000,
+    "ratings": [
+      { "name": "1 star", "count": 60000 },
+      { "name": "2 star", "count": 70000 },
+      { "name": "3 star", "count": 200000 },
+      { "name": "4 star", "count": 400000 },
+      { "name": "5 star", "count": 870000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/App_Store_%28iOS%29_logo.svg",
+    "title": "App Store",
+    "companyName": "Apple Inc.",
+    "id": 14,
+    "description": "Browse and download apps for iPhone, iPad, and Apple Watch from the official App Store.",
+    "size": 90,
+    "reviews": 2500000,
+    "ratingAvg": 4.8,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 80000 },
+      { "name": "2 star", "count": 50000 },
+      { "name": "3 star", "count": 100000 },
+      { "name": "4 star", "count": 400000 },
+      { "name": "5 star", "count": 1870000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    "title": "Apple Fitness+",
+    "companyName": "Apple Inc.",
+    "id": 15,
+    "description": "Workout anywhere with guided fitness sessions designed by top trainers, integrated with Apple Watch.",
+    "size": 190,
+    "reviews": 700000,
+    "ratingAvg": 4.5,
+    "downloads": 100000000,
+    "ratings": [
+      { "name": "1 star", "count": 20000 },
+      { "name": "2 star", "count": 30000 },
+      { "name": "3 star", "count": 80000 },
+      { "name": "4 star", "count": 150000 },
+      { "name": "5 star", "count": 420000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_Maps_icon.svg",
+    "title": "Apple Maps",
+    "companyName": "Apple Inc.",
+    "id": 16,
+    "description": "Get real-time navigation, traffic updates, and immersive city experiences with Apple Maps.",
+    "size": 150,
+    "reviews": 2300000,
+    "ratingAvg": 4.4,
+    "downloads": 900000000,
+    "ratings": [
+      { "name": "1 star", "count": 70000 },
+      { "name": "2 star", "count": 90000 },
+      { "name": "3 star", "count": 200000 },
+      { "name": "4 star", "count": 600000 },
+      { "name": "5 star", "count": 1340000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Apple_News_icon.svg",
+    "title": "Apple News",
+    "companyName": "Apple Inc.",
+    "id": 17,
+    "description": "Stay informed with top stories curated from trusted sources and personalized news feeds.",
+    "size": 120,
+    "reviews": 950000,
+    "ratingAvg": 4.2,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 30000 },
+      { "name": "2 star", "count": 40000 },
+      { "name": "3 star", "count": 100000 },
+      { "name": "4 star", "count": 250000 },
+      { "name": "5 star", "count": 530000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/ICloud_logo.svg",
+    "title": "iCloud Drive",
+    "companyName": "Apple Inc.",
+    "id": 18,
+    "description": "Access and manage your photos, files, and documents securely stored in iCloud Drive.",
+    "size": 170,
+    "reviews": 1100000,
+    "ratingAvg": 4.6,
+    "downloads": 700000000,
+    "ratings": [
+      { "name": "1 star", "count": 50000 },
+      { "name": "2 star", "count": 60000 },
+      { "name": "3 star", "count": 120000 },
+      { "name": "4 star", "count": 300000 },
+      { "name": "5 star", "count": 570000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/FaceTime_iOS_17_icon.png",
+    "title": "FaceTime",
+    "companyName": "Apple Inc.",
+    "id": 19,
+    "description": "Make high-quality video and audio calls with friends and family using FaceTime across Apple devices.",
+    "size": 95,
+    "reviews": 2800000,
+    "ratingAvg": 4.8,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 60000 },
+      { "name": "2 star", "count": 40000 },
+      { "name": "3 star", "count": 120000 },
+      { "name": "4 star", "count": 500000 },
+      { "name": "5 star", "count": 2080000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Apple_Wallet_icon.svg",
+    "title": "Apple Wallet",
+    "companyName": "Apple Inc.",
+    "id": 20,
+    "description": "Store your payment cards, passes, and tickets securely with Apple Wallet for easy access.",
+    "size": 110,
+    "reviews": 1750000,
+    "ratingAvg": 4.7,
+    "downloads": 600000000,
+    "ratings": [
+      { "name": "1 star", "count": 40000 },
+      { "name": "2 star", "count": 50000 },
+      { "name": "3 star", "count": 90000 },
+      { "name": "4 star", "count": 300000 },
+      { "name": "5 star", "count": 1270000 }
+    ]
+  }
+]
