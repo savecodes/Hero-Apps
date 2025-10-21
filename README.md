@@ -53,13 +53,10 @@ The platform showcases 20 premium applications including:
 
 ### **Data Management**
 - JSON Data Structure
-- RESTful API Integration
-- State Management (Redux/Context API)
 
 ### **Additional Tools**
 - Git Version Control
 - NPM/Yarn Package Manager
-- ESLint & Prettier
 - Webpack/Vite Build Tools
 
 ## 📊 Platform Statistics
@@ -79,7 +76,6 @@ Categories:           5+
 - **Clean & Modern** - Minimalist design focused on content
 - **Responsive Layout** - Optimized for all screen sizes
 - **Interactive Elements** - Smooth animations and transitions
-- **Accessible** - WCAG 2.1 compliant
 
 
 
