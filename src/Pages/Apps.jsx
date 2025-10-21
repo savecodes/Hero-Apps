@@ -15,6 +15,9 @@ const Apps = () => {
   const searchedApps = term
     ? sApps.filter((app) => app.title?.toLowerCase().includes(term))
     : sApps;
+  if (loading) {
+    return <LoadingSpinner fullScreen={true} />;
+  }
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -51,23 +54,15 @@ const Apps = () => {
         </div>
 
         {/* All Apps */}
-        {loading ? (
-          <div className="flex justify-center py-12">
-            <LoadingSpinner size="lg" />
-          </div>
-        ) : searchedApps.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {searchedApps.map((app) => (
-              <AllAppsCard key={app.id} app={app} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">
-              No apps found matching
-            </p>
-          </div>
-        )}
+        <div className="flex justify-center py-12"></div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          {searchedApps.map((app) => (
+            <AllAppsCard key={app.id} app={app} />
+          ))}
+        </div>
+        <div className="text-center py-12">
+          <p className="text-gray-500 text-lg">No apps found matching</p>
+        </div>
       </Container>
     </div>
   );

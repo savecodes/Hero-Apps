@@ -6,24 +6,20 @@ import ratingImg from "../assets/icon-ratings.png";
 import reviewImg from "../assets/icon-review.png";
 import AppRatingsChart from "../Components/AppRatingsChart";
 import { toast } from "react-toastify";
+import LoadingSpinner from "../Components/LoadingSpinner";
+import { useState } from "react";
 
 const AppsDetails = () => {
   const { id } = useParams();
-  const { apps, loading, error } = useAppsData();
+  const { apps, loading } = useAppsData();
+  const [isInstalled, setIsInstalled] = useState(false);
 
-  if (loading) return <div className="text-center py-20">Loading...</div>;
-  if (error)
-    return (
-      <div className="text-center py-20 text-red-500">
-        Error loading app data
-      </div>
-    );
+  if (loading) return <LoadingSpinner></LoadingSpinner>;
 
   const app = apps?.find((dApps) => String(dApps.id) === id);
   if (!app) return <div className="text-center py-20">App not found</div>;
 
   const ratingData = app?.ratings || [];
-  // const maxRating = Math.max(...ratingData.map((r) => r.count));
 
   const handleInstall = () => {
     const existsApps = JSON.parse(localStorage.getItem("Apps"));
@@ -38,6 +34,7 @@ const AppsDetails = () => {
     localStorage.setItem("Apps", JSON.stringify(updatedApps));
 
     toast.success(`${app.title} Installed Successfully!`);
+    setIsInstalled(true);
   };
 
   const installSize = `${app.size} MB`;
@@ -111,10 +108,16 @@ const AppsDetails = () => {
               {/* Install Button */}
               <button
                 onClick={handleInstall}
-                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-6 rounded-lg transition-colors cursor-pointer
-                "
+                disabled={isInstalled}
+                className={`text-white font-semibold py-2.5 px-6 rounded-lg transition-colors
+    ${
+      isInstalled
+        ? "bg-gray-400 cursor-not-allowed"
+        : "bg-green-500 hover:bg-green-600 cursor-pointer"
+    } // normal state
+  `}
               >
-                Install Now ({installSize})
+                {isInstalled ? "Installed" : `Install Now (${installSize})`}
               </button>
             </div>
           </div>
