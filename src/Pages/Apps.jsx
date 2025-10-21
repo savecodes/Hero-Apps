@@ -3,10 +3,11 @@ import Container from "../Components/Container";
 import { Search } from "lucide-react";
 import useAppsData from "../Hooks/useAppsData";
 import AllAppsCard from "../Components/AllAppsCard";
+import LoadingSpinner from "../Components/LoadingSpinner";
 
 const Apps = () => {
-  const apps = useAppsData();
-  const sApps = Array.isArray(apps.apps) ? apps.apps : [];
+  const { apps, loading } = useAppsData();
+  const sApps = Array.isArray(apps) ? apps : [];
 
   const [search, setSearch] = useState("");
   const term = search.trim().toLowerCase();
@@ -32,9 +33,9 @@ const Apps = () => {
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
             {/* Apps Counter */}
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 flex-shrink-0">
-             Apps Found ({searchedApps.length})
+              Apps Found ({searchedApps.length})
             </h2>
-            
+
             {/* Search Input */}
             <div className="relative w-full sm:w-auto sm:max-w-xs md:max-w-sm lg:max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
@@ -50,19 +51,23 @@ const Apps = () => {
         </div>
 
         {/* All Apps */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pb-8">
-          {searchedApps.length > 0 ? (
-            searchedApps.map((app) => (
+        {loading ? (
+          <div className="flex justify-center py-12">
+            <LoadingSpinner size="lg" />
+          </div>
+        ) : searchedApps.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {searchedApps.map((app) => (
               <AllAppsCard key={app.id} app={app} />
-            ))
-          ) : (
-            <div className="col-span-full text-center py-12">
-              <p className="text-gray-500 text-lg">
-                No apps found matching "{search}"
-              </p>
-            </div>
-          )}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-gray-500 text-lg">
+              No apps found matching
+            </p>
+          </div>
+        )}
       </Container>
     </div>
   );

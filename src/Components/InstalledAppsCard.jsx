@@ -1,15 +1,16 @@
+import { toast } from "react-toastify";
 import downloadImg from "../assets/icon-downloads.png";
 import ratingImg from "../assets/icon-ratings.png";
 
-const InstalledAppsCard = ({ iApps }) => {
-
-
+const InstalledAppsCard = ({ iApps, setInstalled }) => {
   const handleUninstall = (id) => {
     const existsApps = JSON.parse(localStorage.getItem("Apps"));
     let updatedApps = existsApps.filter((a) => a.id !== id);
 
+    setInstalled(updatedApps);
     localStorage.setItem("Apps", JSON.stringify(updatedApps));
-    window.location.reload();
+    // window.location.reload();
+    toast.success(`${iApps.title} uninstalled successfully!`);
   };
 
   return (

@@ -4,8 +4,8 @@ import TrendingApps from "../Components/TrendingApps";
 const Home = () => {
   return (
     <div>
-        <Banner />
-        <TrendingApps />
+      <Banner />
+      <TrendingApps />
     </div>
   );
 };

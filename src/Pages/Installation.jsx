@@ -81,6 +81,7 @@ const Installation = () => {
               <InstalledAppsCard
                 key={iApps.id}
                 iApps={iApps}
+                setInstalled={setInstalled}
               ></InstalledAppsCard>
             );
           })}

@@ -2,10 +2,12 @@ import { NavLink } from "react-router";
 import useAppsData from "../Hooks/useAppsData";
 import Container from "./Container";
 import TrendingAppsCard from "./TrendingAppsCard";
+import LoadingSpinner from "./LoadingSpinner";
 
 const TrendingApps = () => {
-  const apps = useAppsData();
-  const trendingApps = apps.apps.slice(0, 8);
+  const { apps, loading } = useAppsData();
+
+  const trendingApps = apps?.slice(0, 8) || [];
   // console.log(trendingApps);
   return (
     <div>
@@ -19,13 +21,20 @@ const TrendingApps = () => {
           </p>
         </div>
         {/* Trending Apps Data Start */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {trendingApps.map((tdApp) => {
-            return (
-              <TrendingAppsCard key={tdApp.id} tdApp={tdApp}></TrendingAppsCard>
-            );
-          })}
-        </div>
+        {loading ? (
+          <LoadingSpinner />
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {trendingApps.map((tdApp) => {
+              return (
+                <TrendingAppsCard
+                  key={tdApp.id}
+                  tdApp={tdApp}
+                ></TrendingAppsCard>
+              );
+            })}
+          </div>
+        )}
         {/* Trending Apps Data End */}
         <div className="flex justify-center py-8 px-4">
           <NavLink

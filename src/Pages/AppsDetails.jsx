@@ -1,19 +1,11 @@
 import { useParams } from "react-router";
 import useAppsData from "../Hooks/useAppsData";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  ResponsiveContainer,
-  Cell,
-  Tooltip,
-} from "recharts";
 import Container from "../Components/Container";
-
 import downloadImg from "../assets/icon-downloads.png";
 import ratingImg from "../assets/icon-ratings.png";
 import reviewImg from "../assets/icon-review.png";
+import AppRatingsChart from "../Components/AppRatingsChart";
+import { toast } from "react-toastify";
 
 const AppsDetails = () => {
   const { id } = useParams();
@@ -31,19 +23,21 @@ const AppsDetails = () => {
   if (!app) return <div className="text-center py-20">App not found</div>;
 
   const ratingData = app?.ratings || [];
-  const maxRating = Math.max(...ratingData.map((r) => r.count));
+  // const maxRating = Math.max(...ratingData.map((r) => r.count));
 
   const handleInstall = () => {
     const existsApps = JSON.parse(localStorage.getItem("Apps"));
     let updatedApps = [];
     if (existsApps) {
       const isDuplicate = existsApps.some((a) => a.id === app.id);
-      if (isDuplicate) return alert("Sorry");
+      if (isDuplicate) return toast.error(`${app.title} Already Installed`);
       updatedApps = [...existsApps, app];
     } else {
       updatedApps.push(app);
     }
     localStorage.setItem("Apps", JSON.stringify(updatedApps));
+
+    toast.success(`${app.title} Installed Successfully!`);
   };
 
   const installSize = `${app.size} MB`;
@@ -59,7 +53,7 @@ const AppsDetails = () => {
               <img
                 src={app.image}
                 alt={app.title}
-                className="w-24 h-24 md:w-32 md:h-32 rounded-2xl shadow-md"
+                className="w-24 h-24 md:w-32 md:h-32 rounded-2xl shadow-md p-1"
               />
             </div>
 
@@ -117,7 +111,7 @@ const AppsDetails = () => {
               {/* Install Button */}
               <button
                 onClick={handleInstall}
-                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-6 rounded-lg transition-colors"
+                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-6 rounded-lg transition-colors cursor-pointer"
               >
                 Install Now ({installSize})
               </button>
@@ -131,65 +125,7 @@ const AppsDetails = () => {
             Ratings
           </h2>
 
-          <div className="space-y-4">
-            {ratingData.map((item, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <span className="text-sm font-medium text-gray-700 w-16 text-right">
-                  {item.name}
-                </span>
-
-                <div className="flex-grow" style={{ height: "32px" }}>
-                  <ResponsiveContainer width="100%" height={32}>
-                    <BarChart
-                      data={[item]}
-                      layout="horizontal"
-                      margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
-                    >
-                      <XAxis type="number" domain={[0, maxRating]} hide />
-                      <YAxis type="category" dataKey="name" hide />
-                      <Tooltip
-                        cursor={false}
-                        content={({ active, payload }) => {
-                          if (active && payload && payload.length) {
-                            return (
-                              <div className="bg-gray-800 text-white px-3 py-2 rounded-lg shadow-lg text-sm">
-                                <p className="font-semibold">
-                                  {payload[0].payload.name}
-                                </p>
-                                <p className="text-gray-200">
-                                  Reviews: {payload[0].value.toLocaleString()}
-                                </p>
-                              </div>
-                            );
-                          }
-                          return null;
-                        }}
-                      />
-                      <Bar dataKey="count" radius={[4, 4, 4, 4]} barSize={32}>
-                        <Cell
-                          fill={
-                            index === 4
-                              ? "#f97316"
-                              : index === 3
-                              ? "#fb923c"
-                              : index === 2
-                              ? "#fdba74"
-                              : index === 1
-                              ? "#fed7aa"
-                              : "#ffedd5"
-                          }
-                        />
-                      </Bar>
-                    </BarChart>
-                  </ResponsiveContainer>
-                </div>
-
-                <span className="text-sm text-gray-600 w-24 text-right">
-                  {item.count.toLocaleString()}
-                </span>
-              </div>
-            ))}
-          </div>
+          <AppRatingsChart ratingData={ratingData} />
         </div>
 
         {/* Description Section */}
