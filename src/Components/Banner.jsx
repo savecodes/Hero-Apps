@@ -24,14 +24,20 @@ const Banner = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 pb-6">
-            <button className="btn px-6 py-3 text-base sm:text-lg">
+            <NavLink
+              to={"/apps"}
+              className="btn px-6 py-3 text-base sm:text-lg"
+            >
               <FaGooglePlay className="text-2xl" />
               Google Play
-            </button>
-            <button className="btn px-6 py-3 text-base sm:text-lg">
+            </NavLink>
+            <NavLink
+              to={"/apps"}
+              className="btn px-6 py-3 text-base sm:text-lg"
+            >
               <FaApple className="text-2xl" />
               App Store
-            </button>
+            </NavLink>
           </div>
         </div>
 

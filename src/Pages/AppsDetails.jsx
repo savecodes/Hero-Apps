@@ -111,7 +111,8 @@ const AppsDetails = () => {
               {/* Install Button */}
               <button
                 onClick={handleInstall}
-                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-6 rounded-lg transition-colors cursor-pointer"
+                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-6 rounded-lg transition-colors cursor-pointer
+                "
               >
                 Install Now ({installSize})
               </button>
